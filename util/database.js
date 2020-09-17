@@ -5,12 +5,12 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const sequelize = new Sequelize(
-  "category",
-  "root",
-  "shivamsharma1",
+  process.env.DBNAME || "category",
+  process.env.USERNAME || "root",
+  process.env.PASSWORD || "shivamsharma1",
   {
     dialect: "mysql",
-    host: "localhost",
+    host: process.env.HOST || "localhost",
   }
 );
 module.exports = sequelize;
