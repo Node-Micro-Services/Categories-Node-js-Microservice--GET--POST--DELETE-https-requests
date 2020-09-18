@@ -5,7 +5,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const sequelize = new Sequelize(
-  process.env.DBNAME || "trip",
+  process.env.DBNAME || "category",
   process.env.USERNAME || "root",
   process.env.PASSWORD || "shivamsharma1",
   {
